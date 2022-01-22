@@ -36,7 +36,7 @@ Greatest number:  45
 
            Question 5
 
-Enter a sentence my name is Mehul
+Enter a sentence: my name is Mehul
 Yes
 
            Question 6
