@@ -22,13 +22,13 @@ print(sen.replace(' ',''))
 #Question 2
 print("\n           Question 2\n")
 name = 'Mehul Mangla'
-sid = '21105043'
+sid = 21105043
 c = 'ECE'
-d = '10'
+d = 9.9
 name1='Hey, %s here!'%(name)
 print(name1)
-print('My SID is ',sid)
-print('I am from ',c,' department and my CGPA is ',d)
+print('My SID is %d'%(sid))
+print('I am from %s department and my CGPA is %f'%(c,d))
 
 #Question 3
 print("\n           Question 3\n")
@@ -47,16 +47,13 @@ print("\n           Question 4\n")
 x = int(input('1st number=? '))
 y = int(input('2nd number=? '))
 z = int(input('3rd number=? '))
-if x>y:
-    if x>z:
-        print('Largest number = ',x)
-    elif x<z:
-        print('Largest number = ',z)
-elif x<y:
-    if y>z:
-        print('Largest number = ',y)
-    elif y<z:
-        print('Largest number = ',z)
+
+if (x>y) and (x>z):
+    print('Greatest number: ',x)
+elif (y>x) and (y>z):
+    print('Greatest number: ',y)
+elif (z>x) and (z>y):
+    print('Greatest number: ',z)
 
 #Question 5
 print("\n           Question 5\n")
@@ -71,7 +68,8 @@ print("\n           Question 6\n")
 l= int(input('Enter first side length '))
 m= int(input('Enter second side length '))
 n= int(input('Enter third side length '))
-if (l+m)>n and (m+n)>l and (l+n)>m:
-    print('Yes')
-else:
+if (l+m)<n or (m+n)<l or (l+n)<m:
     print('No')
+else:
+    print('Yes')
+
