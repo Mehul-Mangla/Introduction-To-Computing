@@ -57,7 +57,7 @@ elif (z>x) and (z>y):
 
 #Question 5
 print("\n           Question 5\n")
-sentence = str(input('Enter a sentence '))
+sentence = str(input('Enter a sentence: '))
 if 'name' in sentence:
     print('Yes')
 else:
