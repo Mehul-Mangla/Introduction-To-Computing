@@ -3,22 +3,22 @@ print("Question 1\n")
 sentence= str(input("Enter a string \n"))
 
 #To check whether user has entered a word or sentence
-new_sen=sentence.split(" ")
+new_sen=sentence.lower().split(" ")
 count=0
 
 #If user has entered a word
 if len(new_sen)==1:
     ch=str(input("Enter the character whose occurrence you want to find \n"))
-    for i in sentence:
-        if i == ch:
+    for i in sentence.lower():
+        if i == ch.lower():
             count+=1
-    print("%s occurs in the given string %s time(s)" %(ch,count))
+    print("%s occurs in %s the given string time(s)" %(ch,count))
 
 #If user has entered a sentence
 elif len(new_sen)>1:
     word=str(input("Enter the word whose occurrence you want to find \n"))
     for i in new_sen:
-        if i == word:
+        if i == word.lower():
             count+=1
     print("%s occurs in the given string %d time(s)" %(word,count))
 
