@@ -91,7 +91,8 @@ Fibonacci sequence upto 8 term(s) is
 5
 8
 13
-
+Average is: 4.12
+  
 Question 8
 
 
