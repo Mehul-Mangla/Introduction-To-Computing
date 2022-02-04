@@ -197,7 +197,7 @@ print("Name: ",d2[stud],"\nSID: ",stud)
 #           Question 7
 print("\nQuestion 7\n")
 nt = int(input("Please enter the number of terms: ")) #nt stands for number of terms
-
+l=list()
 # First two terms
 a1, a2 = 0, 1
 count = 0
@@ -210,16 +210,24 @@ if nt == 1:
    print("Fibonacci sequence upto %d term(s) is"%nt)
    print(a1)
 
+
 # Generate fibonacci sequence
 else:
    print("Fibonacci sequence upto %d term(s) is"%nt)
    while count < nt:
        print(a1)
        a_n = a1 + a2
+       l = l + [a1]
        #Updating values
        a1 = a2
        a2 = a_n
        count += 1
+
+#Printing average
+if nt==1:
+   print("Average is: 0")
+else:
+   print(f'Average is: {sum(l)/len(l):.2f}')
 
 
 
