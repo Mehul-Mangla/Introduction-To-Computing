@@ -227,7 +227,7 @@ else:
 if nt==1:
    print("Average is: 0")
 else:
-   print(f'Average is: {sum(l)/len(l):.2f}')
+   print(f'Average is: {sum(l)/len(l):.2f}') #.2f is used to print output upto 2 decimal places
 
 
 
