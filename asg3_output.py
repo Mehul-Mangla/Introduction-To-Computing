@@ -73,7 +73,7 @@ Q6 (b)
  [('Aditya', 2342), ('Gaurav', 2116), ('Rohan', 2010), ('Sahil', 2252)]
 
 Q6 (c)
- [(2010, 'Rohan'), (2116, 'Gaurav'), (2252, 'Sahil'), (2342, 'Aditya')]
+ {'Rohan': 2010, 'Gaurav': 2116, 'Sahil': 2252, 'Aditya': 2342}
 
 Please enter the SID of the student: 2342
 Name:  Aditya 
