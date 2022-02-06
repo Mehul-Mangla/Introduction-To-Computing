@@ -157,7 +157,6 @@ while i>1:
 
 
 
-
 #           Question 6
 print("\nQuestion 6")
 
@@ -184,8 +183,7 @@ print("\nQ6 (b)\n",sorted(d1.items()))
 
 #Q6 (c)
 lst=sorted((value, key) for (key,value) in d1.items())
-for v,k in lst:
-    d1=dict([(k,v)])
+d1=dict([(k,v) for v,k in lst])
 print("\nQ6 (c)\n",d1)
 
 #Q6 (d)
