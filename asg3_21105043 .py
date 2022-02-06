@@ -164,14 +164,14 @@ print("\nQuestion 6")
 #Asking if user wants to enter their details
 x=str(input("\nDo you want to enter your details?\nUse Y for Yes & N for No\n"))
 d1=dict()
-d2=dict()
+#d2=dict()
 
 #Loop if user enters yes
 while "Y" in x or "y" in x:
     name = str(input("Enter your name: "))
     sid = int(input("Enter your SID: "))
     d1[name] = sid #Dictionary with name as key & sid as value
-    d2[sid] = name #Dictionary with sid as key & name as value
+    #d2[sid] = name #Dictionary with sid as key & name as value
 
     #Asking if the user wants to enter details again
     x=str(input("\nDo you want to enter your details?\nUse Y for Yes & N for No\n"))
@@ -183,14 +183,23 @@ print("\nQ6 (a)\n",d1)
 print("\nQ6 (b)\n",sorted(d1.items()))
 
 #Q6 (c)
-print("\nQ6 (c)\n",sorted(d2.items()))
+lst=sorted((value, key) for (key,value) in d1.items())
+for v,k in lst:
+    d1=dict([(k,v)])
+print("\nQ6 (c)\n",d1)
 
 #Q6 (d)
+#Define a function to return key(name) from value(SID)
+def key_from_value(stud):
+    for key, value in d1.items():
+         if stud == value:
+             return key
+ 
+    return "SID doesn't exist"
+
 #Asking the user for sid of student whose details have to be found
-
-stud=int(input("\nPlease enter the SID of the student: "))
-print("Name: ",d2[stud],"\nSID: ",stud)
-
+stud=int(input("\nPlease enter the SID of the student: ")) 
+print("Name: ",key_from_value(stud),"\nSID: ",stud)
 
 
 
