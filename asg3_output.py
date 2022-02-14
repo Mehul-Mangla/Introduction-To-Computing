@@ -6,9 +6,8 @@ Question 1
 
 Enter a string 
 hhheeeellloooooooo
-Enter the character whose occurrence you want to find 
-o
-o occurs in the given string 0 time(s)
+Occurrence of all characters in the given string is :
+ {'h': 3, 'e': 4, 'l': 3, 'o': 8}
 
 Question 2
 
