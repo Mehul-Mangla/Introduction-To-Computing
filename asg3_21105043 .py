@@ -4,24 +4,27 @@ string= str(input("Enter a string \n"))
 
 #To check whether user has entered a word or sentence
 new_str=string.lower().split(" ")
-count=0
+occ = {}
 
 #If user has entered a word
 if len(new_str)==1:
-    ch=str(input("Enter the character whose occurrence you want to find \n"))
-    for i in new_str:
-        if i == ch.lower():
-            count+=1
-    print("%s occurs in the given string %d time(s)" %(ch,count))
+    for i in string.lower():
+        if i in occ: 
+            occ[i] += 1
+        else: 
+            occ[i] = 1
+    # Printing result  
+    print ("Occurrence of all characters in the given string is :\n "+ str(occ))
 
 #If user has entered a sentence
 elif len(new_str)>1:
-    word=str(input("Enter the word whose occurrence you want to find \n"))
     for i in new_str:
-        if i == word.lower():
-            count+=1
-    print("%s occurs in the given string %d time(s)" %(word,count))
-
+        if i in occ: 
+            occ[i] += 1
+        else: 
+            occ[i] = 1
+    # Printing result  
+    print ("Occurrence of all words in the given string is :\n "+ str(occ))
 
 
 
